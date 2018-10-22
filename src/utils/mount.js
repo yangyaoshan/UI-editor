@@ -1,15 +1,15 @@
 import Vue from 'vue'
 //给定模板，和要挂载的元素id，挂载组件   
-var mount = function(id, _component) {
+var mount = function(id, template) {
   return new Promise((resolve, reject) => {
     //需要延迟才能取到document.getElementById(id)
     setTimeout(() => {
       let vm = new Vue({
         name: id.toString(),
         data() {
-            return data
+          return {}
         },
-        template: _component.template,
+        template: template,
         el: document.getElementById(id),
         mounted() {
           console.log('mounted !');

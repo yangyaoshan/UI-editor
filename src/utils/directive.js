@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import {throttle} from '@/utils/common'
+import mount from './mount'
 Vue.directive('drag', {
   inserted (el, binding) {
     // console.log('el === ', el)
